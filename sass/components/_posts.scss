@@ -1,0 +1,145 @@
+body{
+	background:darken($bluegray, 15%);
+}
+main{
+	margin-top: 20px;
+	width: 100%;
+}
+.posts{
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	box-shadow: $shadow;
+	border-radius: 10px;
+	background: transparent;
+
+	&_info{
+		background: lighten($bluegray, 15%);
+		padding: 0;
+		margin: 0;
+		height: 50px;
+		@include flex;
+
+		.img-box{
+			width: 40px;
+			height: 40px;
+			outline: none;
+			border: none;
+			margin: 0 10px;
+
+			img{
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: 93%;
+			background-size: cover;
+			// border: 3px solid $light;
+		}
+
+		}
+		h4{
+			font-style: italic;
+			font-family: Merriweather;
+			margin-right: 10px;
+			color:aliceblue;
+			letter-spacing: 1px;
+			transform: translateY(2px)
+		}
+
+		h5{
+			border: 3px solid $light;
+			padding: 3px 1rem;
+			border-radius: 15px;
+			background: $amber;
+			color: $light;
+			font-weight: 600;
+
+			&:hover{
+				background: darken($amber, 9%);
+				cursor: pointer;
+				color: $deepblue;
+			}
+		}
+
+		h3{
+			margin-left: auto;
+			margin-right: 20px;
+			font-size: 15px;
+			color: darken($bluegray, 40%);
+		}
+
+		.liked{
+
+		}
+	}
+	&_content{
+		background: lighten($bluegray, 25%);
+		padding: 1rem;
+
+		h4{
+			font-size: 2rem;
+			font-weight: bold;
+			color: darken($bluegray, 20%);
+		}
+
+		p{
+			text-align: justify;
+			font-family: arial;
+		}
+	}
+
+	&_like{
+		background: lighten($bluegray, 15%);
+		text-align: right;
+		padding:10px 20px 10px 0px;
+		cursor: pointer;
+		font-weight: 700;
+		margin-bottom: 20px;
+
+		div{
+			display: inline-block;
+		}
+
+		div:hover{
+			color:$likered;
+		}
+
+	}
+
+}
+
+#PostModal{
+
+	.btn:not(:disabled):not(.disabled) {
+	    cursor: pointer;
+	    font-size: 15px;
+	    color: $light;
+	    background: $amber;
+	    border-radius: 7px;
+	    padding: 5px 10px;
+	}
+
+	.close:not(:disabled):not(.disabled) {
+	    cursor: pointer;
+	    font-size: 30px;
+	    color: $likered;
+	}
+
+	.form-control {
+		font-size: 15px;
+		color: lighten(#888888, 10%);
+	}
+
+	#change_title{
+	    	font-size: 1.7rem;
+	    	color: darken($bluegray,90%);
+	}
+
+	.btn-post{
+		@include btn($deepblue);
+		color : $amber;
+		font-weight: 600;
+		outline: none;
+		border: none;
+	}
+}

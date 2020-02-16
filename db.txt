@@ -1,0 +1,36 @@
+CREATE DATABASE LikeSystem
+
+CREATE TABLE Users(
+User_Id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+User_Name VARCHAR(15) NOT NULL,
+User_Email VARCHAR(25) NOT NULL,
+User_Password VARCHAR(15) NOT NULL,
+User_Image VARCHAR(21) NOT NULL
+)
+
+CREATE TABLE POSTS(
+Post_Id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Post_Title VARCHAR(50) NOT NULL,
+Post_Content VARCHAR(250) NOT NULL,
+User_Id INT(4)NOT NULL,
+User_Name VARCHAR(15) NOT NULL,
+User_Image VARCHAR(21) NOT NULL,
+Post_Date VARCHAR(13) NOT NULL
+)
+
+CREATE TABLE Likes(
+Like_Id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Likes INT(5) NOT NULL,
+Total_Likes INT(5) NOT NULL,
+User_Id INT(4) NOT NULL,
+Post_Id INT(4) NOT NULL,
+Liked_Image VARCHAR(21) NOT NULL,
+User_Liked VARCHAR(15) NOT NULL,
+Status VARCHAR(11) DEFAULT 'unseen',
+Liked_On DATETIME DEFAULT NOW()
+)
+
+
+SELECT likes.User_Id, likes.Liked_On, likes.User_Liked, likes.Status likes.Post_Id FROM likes
+				INNER JOIN posts ON likes.Post_Id = posts.Post_Id
+                WHERE Post_Id = '3' AND Status = 'unseen'

@@ -1,0 +1,93 @@
+
+.header{
+	margin: 1rem 0;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: bolder;
+	color: $amber;
+	letter-spacing: 1px;
+	font-size: 2.7rem;
+
+}
+
+.login,.signup{
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	justify-content: flex-end;
+
+	&_btn{
+		@include btn($deepblue);
+		color: $light;
+	}
+
+	&_btn:hover{
+		cursor: pointer;
+		background: darken($deepblue, 20%);
+		color: $light;
+		text-decoration: none;
+	}
+
+}
+
+#myform,#form{
+	width: 100%;
+	padding: 2rem;
+	box-shadow: $shadow;
+	display: block;
+	margin-top: 10px;
+	background: lighten($bluegray, 10%);
+
+
+	.group{
+		width: 100%;
+		padding: .5rem 0;
+		margin-bottom: 5px;
+		// background: red;
+	}
+	 label{
+		color:$light;
+		font-weight: bolder;
+		margin-bottom: 0;
+		letter-spacing: .5px;
+	}
+
+	 input{
+		display: block;
+		width: 100%;
+		padding: .3rem .8rem;
+		border-radius: 5px 0 5px 0 ;
+		outline: none;
+		border: none;
+	 	color: lighten($deepblue, 5%);
+
+	}
+	 input:focus{
+	 	border-bottom: 2px solid red;
+	 }
+
+	  input:focus:valid{
+	 	border-bottom: 2px solid #4caf50;
+	 }
+
+	 ::placeholder{
+	 	font-family: monospace;
+	 	font-weight: 400;
+	 	padding-left: 10px;
+	 }
+
+	#regbtn, #loginbtn{
+	 	@include btn($amber);
+	 	border: none;
+	 	color: $purple;
+	 	margin-bottom: 20px;
+	 }
+
+	 #regbtn:hover,#loginbtn:hover{
+	 	color: lighten($amber, 10%);
+	 	background: darken($purple, 10%);
+	 	transition:  color .1s linear;
+	 	cursor: pointer;
+ }
+
+}

@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	width: 100%;
+	font-family: Roboto, "Helvetica Neue", oswald, sans-serif;
+	font-size: 1.8rem;
+	background: $bluegray;
+	position: relative;
+	height: 100vh;
+}
+
+a{
+	text-decoration: none;
+}
+
+#wrapper{
+	width: 500px;
+	margin: 0 auto;
+	padding: 2rem;
+	// position: absolute;
+	// top: 40%;
+	// left: 50%;
+	// transform: translate(-50%,-50%);
+}
+
+.error{
+	width: 100%;
+	display: block;
+	background: $likered;
+	padding: 1rem;
+	border-radius: 5px;
+	color:$light;
+	font-weight: 600;
+	font-family: Merriweather;
+	letter-spacing: 1px;
+}
+
+.success{
+	width: 100%;
+	display: block;
+	background: #1b5e20;
+	padding: 1rem;
+	border-radius: 5px;
+	color:$light;
+	font-weight: 600;
+	font-family: Merriweather;
+	letter-spacing: 1px;
+}
